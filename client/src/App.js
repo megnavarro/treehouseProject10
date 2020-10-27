@@ -10,7 +10,7 @@ import Courses from './components/Courses';
 // import CourseDetail from './components/CourseDetail';
 import withContext from './Context';
 
-// const CourseDetailWithContext = withContext(CourseDetail);
+const CoursesWithContext = withContext(Courses);
 
 
 export default () => (
@@ -19,7 +19,7 @@ export default () => (
       <Header />
 
       <Switch>
-        <Route exact path="/" component={ () => <Courses /> } />
+        <Route exact path="/" component={ () => <CoursesWithContext /> } />
         {/* <Route exact path="/courses/:id" render={(props) => <CourseDetailWithContext {...props} />}/> */}
       </Switch>
     </div>
